@@ -2,49 +2,66 @@
 @use "varbiles" as v;
 @use "mixins";
 header {
-    background-image: url(/assets/negative-space-black-forest-dawn.jpg);
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 0;
-    padding: 0;
-    @include mixins.desktop {
-      @include mixins.tablet {
-        background-image: url(/assets/negative-space-black-forest-dawn.jpg);
-      }
-      }
-
-   .head {
-    margin: 0;
-    padding: 0;
-     display: flex;
-    position: absolute;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    h1 {
-        font-size: 35px;
-    }
-    p{
-        font-size: 20px;
-        margin: 5px;
-    }
+  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
+@include mixins.desktop {
+  @include mixins.tablet {
+  }
+}
+
+.head-contaner {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 35px;
+  }
+  p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .icone {
+    display: flex;
+    height: auto;
+    transform: translateY(700%);
+    margin-bottom: 0;
+    img {
+      background-color: white;
+      border-radius: 50px;
+    }
+  }
+}
+
 .menu-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  color: #FFF;
+  color: #fff;
   height: 50px;
   padding: 1em;
 }
@@ -61,9 +78,10 @@ header {
   margin: 0 2rem;
   overflow: hidden;
 }
+
 .menu li a {
-  list-style: none;
-  color: #FFF;
+  color: #fff;
+  text-decoration: none;
 }
 
 .menu-button-container {
@@ -74,6 +92,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
+  text-decoration: dashed;
 }
 
 #menu-toggle {
@@ -93,12 +113,12 @@ header {
 }
 
 .menu-button::before {
-  content: '';
+  content: "";
   margin-top: -10px;
 }
 
 .menu-button::after {
-  content: '';
+  content: "";
   margin-top: 10px;
 }
 
@@ -108,7 +128,7 @@ header {
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
+  background: white;
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button::after {
@@ -120,6 +140,7 @@ header {
   .menu-button-container {
     display: flex;
   }
+
   .menu {
     position: absolute;
     top: 0;
@@ -130,6 +151,7 @@ header {
     justify-content: center;
     align-items: center;
   }
+
   #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
@@ -137,11 +159,13 @@ header {
     border: 0;
     transition: height 500ms cubic-bezier(0.32, 1, 0.42, 1);
   }
+
   #menu-toggle:checked ~ .menu li {
     height: 2.5em;
     padding: 0.5em;
     transition: height 500ms cubic-bezier(0.32, 1, 0.42, 1);
   }
+
   .menu > li {
     display: flex;
     justify-content: center;
@@ -150,5 +174,4 @@ header {
     width: 100%;
     color: #ffffff;
   }
-}
 }

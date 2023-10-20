@@ -1,9 +1,15 @@
 @use "varbiles" as v;
 @use "mixins";
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   height: auto;
   width: auto;
+  margin: 0;
+  padding: 0;
 }
 header {
   width: auto;
@@ -14,7 +20,7 @@ main {
   width: auto;
   height: auto;
   @include mixins.desktop {
-    height: 100vh;
+    height: auto;
     width: auto;
   }
 }
