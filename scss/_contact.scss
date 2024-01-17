@@ -1,0 +1,30 @@
+@use "containers";
+@use "varbiles" as v;
+@use "mixins";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+
+  .social-media a {
+    color: white;
+    text-decoration-line: none;
+  }
+
+  .social-media img {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    gap: 2px;
+  }
+
+  @include mixins.tablet {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

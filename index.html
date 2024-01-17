@@ -1,9 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="se">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Given design</title>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a name="home"></a>
+      <nav class="menu-container">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <span class="menu-button"></span>
+        </label>
+        <ul class="menu">
+          <li><a href="#home">Hem</a></li>
+          <li><a href="#if-uss">Om oss</a></li>
+          <li><a href="#kontact-uss">Kontakta oss</a></li>
+        </ul>
+      </nav>
+
+      <article class="head-contaner">
+        <h1>Välkomen till naturen</h1>
+        <p>Det är trivsamt att gå ut i naturen</p>
+        <p>Här ute på Ekerö hittar du fina vandringsleder</p>
+      </article>
+      <article class="head-contaner">
+        <span class="icone">
+          <a href="#if-uss"
+            ><img src="assets/circledownicone.png" alt="circledownicone"
+          /></a>
+        </span>
+      </article>
+    </header>
+    <main>
+      <a name="if-uss"></a>
+      <h2>Träffa teamet</h2>
+      <section class="aboutuss">
+        <article class="aboutuss-picture">
+          <h3>Alexandra</h3>
+          <img src="assets/profiles/Alexandra_Square.png" alt="Alexandra" />
+          <span class="picture-text">
+            <p>Alexandra är en hund älskare som är vår expert på hundar.</p>
+          </span>
+        </article>
+        <article class="aboutuss-picture">
+          <h3>Rakib</h3>
+          <img src="assets/profiles/Rakib_Square.png" alt="Rakib" />
+          <span class="picture-text">
+            <p>Rakib älskare naturen och gör åning våra stigar.</p>
+          </span>
+        </article>
+        <article class="aboutuss-picture">
+          <h3>NoPerson</h3>
+          <img src="assets/profiles/NoPerson_Square.png" alt="NoPerson" />
+          <span class="picture-text">
+            <p>NoPerson är vår gide som kan allt om naturen.</p>
+          </span>
+        </article>
+        <article class="aboutuss-picture">
+          <h3>Sebastian</h3>
+          <img src="assets/profiles/Sebastian_Square.png" alt="Sebastian" />
+          <span class="picture-text">
+            <p>
+              Sebastian är vår it-expert som håller koll på våra bokningar och
+              hemsidan så att den ser bra ut.
+            </p>
+          </span>
+        </article>
+        <span class="icone">
+          <a href="#kontact-uss"
+            ><img src="assets/circledownicone.png" alt="circledownicone"
+          /></a>
+        </span>
+      </section>
+    </main>
+    <footer>
+      <a name="kontact-uss"></a>
+      <section class="footer">
+        <p class="address">
+          Ekerö miljö AB<br />
+          Ekerövägen 156<br />
+          17851 Ekerö
+        </p>
+        <p class="contact">
+          info@ekeromiljo.se<br />
+          0833932487
+        </p>
+        <p class="social-media">
+          <a href="https://www.instagram.com/ekorinho26/"
+            ><img src="assets/instagramicone.png" alt="instagram" />Instagram</a
+          ><br />
+          <a href="https://www.facebook.com/ecke.p.lindner"
+            ><img src="assets/facebookicone.png" alt="facebook" />Facebook</a
+          ><br />
+          <a href="https://twitter.com/"
+            ><img src="assets/twittericone.png" alt="Twitter" />Twitter</a
+          >
+        </p>
+      </section>
+    </footer>
+  </body>
 </html>

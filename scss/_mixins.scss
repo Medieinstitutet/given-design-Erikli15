@@ -1,0 +1,14 @@
+@use "varbiles" as v;
+
+@mixin tablet {
+    @media screen and (min-width:v.$tablet) {
+        @content;
+    }
+}
+
+
+@mixin desktop {
+    @media screen and (min-width:v.$desktop) {
+        @content;
+    }
+}

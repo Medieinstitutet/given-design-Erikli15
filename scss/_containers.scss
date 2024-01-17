@@ -1,0 +1,31 @@
+@use "varbiles" as v;
+@use "mixins";
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: auto;
+  height: 100vh;
+}
+
+main {
+  width: auto;
+  height: auto;
+  @include mixins.desktop {
+    height: auto;
+    width: auto;
+  }
+}
+
+footer {
+  width: auto;
+  height: auto;
+}
